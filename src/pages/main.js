@@ -2,7 +2,7 @@
 export default function App() {
     return (
         <>
-            <main className="flex flex-col items-center justify-center py-30 px-5 text-center bg-gray-900 lg:w-full md:w-full min-w-150">
+            <main className="h-screen flex flex-col items-center justify-center py-30 px-5 text-center bg-gray-900 lg:w-full md:w-full min-w-150">
                 <div
                     id="Home"
                     className="flex flex-col justify-center items-center text-white w-full max-w-6xl"

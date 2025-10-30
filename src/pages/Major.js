@@ -1,7 +1,7 @@
 export default function App() {
     return (
         <>
-            <div className="w-full bg-linear-to-b from-black to-gray-900 py-16 px-4 lg:w-full md:w-full min-w-150">
+            <div className="w-full bg-linear-to-b from-black to-gray-900 py-50 px-4 lg:w-full md:w-full min-w-150">
                 <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10">
                     MAJORS
                 </h2>

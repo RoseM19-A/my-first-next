@@ -3,8 +3,8 @@ export default function App() {
         <>
             <div id='events' className="`bg-gradient-to-br from-rose-100 via-white to-rose-200 mt-40 lg:w-full md:w-full min-w-150">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl md:text-5xl font-serif text-gray-200 mb-12">
-                        Upcoming <span className="text-amber-200 font-semibold">BTVTED Events</span>
+                    <h2 className="text-4xl md:text-5xl font-serif text-amber-600 mb-12">
+                        Upcoming <span className="text-amber-500 font-semibold">BTVTED Events</span>
                     </h2>
 
                     <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
