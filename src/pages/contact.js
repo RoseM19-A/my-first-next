@@ -67,7 +67,8 @@ export default function App() {
                                     <h3 className="text-2xl font-bold text-center text-blue-900 mb-6">
                                         Enrollment Form
                                     </h3>
-                                    <form className="space-y-4">
+                                    <form action="https://formspree.io/f/xblpyvzb" method="POST" className="space-y-4">
+                                        
                                         <div>
                                             <label className="block text-sm font-semibold mb-2">Full Name</label>
                                             <input
