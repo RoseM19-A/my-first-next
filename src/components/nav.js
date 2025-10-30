@@ -8,7 +8,7 @@ export default function Nav() {
                     <h1 className="text-3xl sm:text-2xl font-bold">
                         <span className="text-slate-900 font-serif text-xl">BTVTED</span>
                         <span className="text-yellow-500 lg:text-3xl md:text-2xl sm:text-xl font-thin">
-                            COURSES.
+                            COURSES
                         </span>
                     </h1>
                 </div>
