@@ -70,37 +70,37 @@ export default function App() {
                                     <form
                                         action="https://formspree.io/f/xblpyvzb"
                                         method="POST"
-                                        class="bg-white/10 backdrop-blur-md p-5 rounded-xl shadow-md space-y-4"
+                                        className="bg-white/10 backdrop-blur-md p-5 rounded-xl shadow-md space-y-4"
                                     >
                                         <div>
-                                            <label for="name" class="block text-sm font-semibold mb-1">Full Name</label>
+                                            <label for="name" className="block text-sm font-semibold mb-1">Full Name</label>
                                             <input
                                                 type="text"
                                                 id="name"
                                                 name="name"
                                                 required
-                                                class="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                                className="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                             />
                                         </div>
 
                                         <div>
-                                            <label for="email" class="block text-sm font-semibold mb-1">Email Address</label>
+                                            <label for="email" className="block text-sm font-semibold mb-1">Email Address</label>
                                             <input
                                                 type="email"
                                                 id="email"
                                                 name="email"
                                                 required
-                                                class="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                                className="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                             />
                                         </div>
 
                                         <div>
-                                            <label for="course" class="block text-sm font-semibold mb-1">Preferred Major</label>
+                                            <label for="course" className="block text-sm font-semibold mb-1">Preferred Major</label>
                                             <select
                                                 id="course"
                                                 name="course"
                                                 required
-                                                class="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                                className="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                             >
                                                 <option value="">Select Major</option>
                                                 <option>Automotive Technology</option>
@@ -112,18 +112,18 @@ export default function App() {
                                         </div>
 
                                         <div>
-                                            <label for="message" class="block text-sm font-semibold mb-1">Message (optional)</label>
+                                            <label for="message" className="block text-sm font-semibold mb-1">Message (optional)</label>
                                             <textarea
                                                 id="message"
                                                 name="message"
                                                 rows="3"
-                                                class="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                                className="w-full px-3 py-2 rounded-md bg-white/90 text-blue-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                             ></textarea>
                                         </div>
 
                                         <button
                                             type="submit"
-                                            class="w-full bg-yellow-400 text-blue-900 font-bold py-2 rounded-md hover:bg-yellow-300 transition"
+                                            className="w-full bg-yellow-400 text-blue-900 font-bold py-2 rounded-md hover:bg-yellow-300 transition"
                                         >
                                             Submit Enrollment
                                         </button>
