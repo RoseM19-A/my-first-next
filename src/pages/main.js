@@ -8,7 +8,7 @@ export default function App() {
                     className="flex flex-col justify-center items-center text-white w-full max-w-6xl"
                 >
                     <h1 className="text-amber-300 text-2xl sm:text-3xl md:text-4xl lg:text-2xl font-semibold py-6">
-                        Welcome to BTVTED Courses
+                        Welcome to BTVTED Coursess
                     </h1>
                     <div className="font-bold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-6 leading-tight tracking-normal">
                         Interactive Learning
