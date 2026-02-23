@@ -19,7 +19,7 @@ export default function App() {
                     </div>
                     <button  type="button"
                         className="mt-10 mb-8 bg-amber-300 text-black text-lg sm:text-lg md:text-md font-bold px-5 sm:px-5 py-4 sm:py-3 rounded-full shadow-lg hover:bg-amber-400 transition-transform duration-300 hover:scale-105">
-                        Find Your Best Major
+                        Find Your Best Majors
                     </button>
                 </div>
             </main>
