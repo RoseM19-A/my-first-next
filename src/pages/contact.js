@@ -24,8 +24,12 @@ export default function App() {
                                  viewBox="0 0 24 24"
                                   fill="none"
                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                 strokeLinejoin="round"
                                   className="w-6 h-6 text-yellow-600 hover:text-yellow-300 transition">
                                   <path d="M10 13a5 5 0 0 1 0-7l1.5-1.5a5 5 0 0 1 7 7L17 12" />
+                                  <path d="M14 11a5 5 0 0 1 0 7L12.5 19.5a5 5 0 1 1-7-7L7 12" />
                             </svg>
                         </div>
                     </div>
