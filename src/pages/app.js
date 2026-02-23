@@ -1,8 +1,8 @@
 import Nav from '../components/nav.js'
 import Main from './main.js'
-import Major from './Major.js'
-import Events from './events.js'
-import Contact from './contact.js'
+// import Major from './Major.js'
+// import Events from './events.js'
+// import Contact from './contact.js'
 
 export default function App() {
     return (
@@ -12,9 +12,9 @@ export default function App() {
             </nav>
             <main>
                 <Main/>
-                <Major/>
+                {/* <Major/>
                 <Events/>
-                <Contact/>
+                <Contact/> */}
             </main>
 
         </>

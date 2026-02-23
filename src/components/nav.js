@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Nav() {
     return (
         <>
-            <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50 px-6 sm:px-10 py-4 flex justify-between items-center">
+            <nav className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-lg shadow-md z-50 px-6 sm:px-10 py-4 flex justify-between items-center">
                 <div className="flex items-center">
                     <h1 className="text-3xl sm:text-2xl font-bold">
                         <span className="text-slate-900 font-serif text-xl">BTVTED</span>
@@ -22,24 +22,24 @@ export default function Nav() {
                 <ul className="hidden md:flex items-center text-slate-600 font-bold gap-6 lg:gap-10">
                     <li>
                         <Link  href="/"
-                            className="rounded-full px-3 py-1 hover:bg-amber-500 hover:text-white transition duration-300" >
+                            className="rounded-full px-3 py-1 hover:bg-amber-50 hover:text-black transition duration-300" >
                             HOME
                         </Link>
                     </li>
                     <li>
                         <Link href="/Major"
-                            className="rounded-full px-3 py-1 hover:bg-blue-500 hover:text-white transition duration-300">
+                            className="rounded-full px-3 py-1 hover:bg-amber-50 hover:text-black transition duration-300">
                             MAJORS
                         </Link>
                     </li>
                     <li>
                         <Link  href="/events"
-                            className="rounded-full px-3 py-1 hover:bg-green-500 hover:text-white transition duration-300" >
+                            className="rounded-full px-3 py-1 hover:bg-amber-50 hover:text-black transition duration-300" >
                             EVENTS
                         </Link>
                     </li>
                     <li> <Link href="/contact"
-                            className="rounded-full px-3 py-1 hover:bg-orange-500 hover:text-white transition duration-300">
+                            className="rounded-full px-3 py-1 hover:bg-amber-50 hover:text-black transition duration-300">
                             CONTACT
                         </Link>
                     </li>

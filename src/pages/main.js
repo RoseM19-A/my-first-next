@@ -2,15 +2,15 @@
 export default function App() {
     return (
         <>
-            <main className="h-screen flex flex-col items-center justify-center py-30 px-5 text-center bg-gray-900 lg:w-full md:w-full min-w-150">
+            <main className="h-screen flex flex-col items-center justify-center py-50 px-5 text-center bg-gray-500 lg:w-full md:w-full min-w-150">
                 <div
                     id="Home"
                     className="flex flex-col justify-center items-center text-white w-full max-w-6xl"
                 >
-                    <h1 className="text-gray-500 text-4xl sm:text-3xl md:text-4xl lg:text-2xl font-semibold py-6">
+                    <h1 className="text-gray-900 text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold py-10">
                         Welcome to BTVTED Courses
                     </h1>
-                    <div className="font-bold font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-6 leading-tight tracking-normal">
+                    <div className="font-bold font-sans text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl mt-6 leading-tight tracking-normal">
                         Interactive Learning
                         <br className="hidden sm:block" />
                         Engaging Students

@@ -1,6 +1,8 @@
+import Nav from "@/components/nav";
 export default function App() {
     return (
         <>
+        <Nav/>
             <footer
                 id="contact"
                 className="bg-black text-white py-50 px-6 lg:w-full md:w-full min-w-150" >

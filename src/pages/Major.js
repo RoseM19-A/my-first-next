@@ -1,6 +1,9 @@
+import Nav from "@/components/nav";
+
 export default function App() {
     return (
         <>
+            <Nav />
             <div className="w-full bg-linear-to-b from-black to-gray-900 py-40 px-4 lg:w-full md:w-full min-w-150">
                 <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10">
                     MAJORS
@@ -16,7 +19,7 @@ export default function App() {
                     <div className="w-full max-w-xs bg-black/80 border border-gray-700 text-white text-center rounded-2xl shadow-md p-6 hover:bg-black/90 transition-all duration-300">
                         <h3 className="text-2xl sm:text-3xl font-bold mb-3">FSM</h3>
                         <p className="text-sm sm:text-base">
-                            Focuses on competencies in food selection, preparation, and management. 
+                            Focuses on competencies in food selection, preparation, and management.
                         </p>
                     </div>
                     <div className="w-full max-w-xs bg-black/80 border border-gray-700 text-white text-center rounded-2xl shadow-md p-6 hover:bg-black/90 transition-all duration-300">
@@ -34,19 +37,19 @@ export default function App() {
                     <div className="w-full max-w-xs bg-black/80 border border-gray-700 text-white text-center rounded-2xl shadow-md p-6 hover:bg-black/90 transition-all duration-300">
                         <h3 className="text-2xl sm:text-3xl font-bold mb-3">Automotive Technology</h3>
                         <p className="text-sm sm:text-base">
-                         Prepares students for diagnostics, repairs, and maintenance of vehicles. 
+                            Prepares students for diagnostics, repairs, and maintenance of vehicles.
                         </p>
                     </div>
                     <div className="w-full max-w-xs bg-black/80 border border-gray-700 text-white text-center rounded-2xl shadow-md p-6 hover:bg-black/90 transition-all duration-300">
                         <h3 className="text-2xl sm:text-3xl font-bold mb-3">Electrical Technology</h3>
                         <p className="text-sm sm:text-base">
-                         Equips students with knowledge and skills in electrical systems and applications.
+                            Equips students with knowledge and skills in electrical systems and applications.
                         </p>
                     </div>
                     <div className="w-full max-w-xs bg-black/80 border border-gray-700 text-white text-center rounded-2xl shadow-md p-6 hover:bg-black/90 transition-all duration-300">
                         <h3 className="text-2xl sm:text-3xl font-bold mb-3"> Mechanical Technology</h3>
                         <p className="text-sm sm:text-base">
-                         Provides training in mechanical engineering principles and applications. 
+                            Provides training in mechanical engineering principles and applications.
                         </p>
                     </div>
                 </div>
