@@ -27,35 +27,154 @@
 //         </>
 //     );
 // }
+"use client";
+
+import { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 export default function App() {
+
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  // Parallax Effects
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const zoom = useTransform(scrollYProgress, [0, 0.4], [1, 1.15]);
+
+  const [allRatings] = useState([
+    {
+      id: 1,
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      name: "Maria Santos",
+      testimonial:
+        "This course helped me improve my teaching strategies using modern digital tools."
+    },
+    {
+      id: 2,
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "John Cruz",
+      testimonial:
+        "Very interactive and engaging lessons. Highly recommended for future educators!"
+    },
+    {
+      id: 3,
+      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      name: "Angela Reyes",
+      testimonial:
+        "The digital approach makes learning more exciting and effective."
+    }
+  ]);
+
   return (
-    <main className="relative min-h-screen flex items-center justify-center text-center px-6">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=90')",
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-      <div className="relative z-10 py-40 max-w-4xl text-gray-300">
-        <h1 className=" text-amber-100 text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 tracking-wide">
-          Welcome to BTVTED Courses
-        </h1>
+    <div ref={containerRef} className="bg-[#0B0F19] text-white overflow-hidden">
 
-        <h2 className=" text-shadow-gray-50 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
-          Interactive Learning <br />
-          Engaging Students <br />
-          In The Digital Age
-        </h2>
+      {/* HERO SECTION */}
+      <section className="relative h-screen flex items-center justify-center text-center">
 
-        <button
-          type="button"
-          className="mt-6 bg-white text-black font-semibold text-lg px-8 py-4 rounded-full shadow-xl transition duration-300 hover:bg-amber-500 hover:scale-105"
+        {/* Parallax Background */}
+        <motion.div
+          style={{ y: bgY, scale: zoom }}
+          className="absolute inset-0"
         >
-          Find Your Best Majors
-        </button>
-      </div>
-    </main>
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=90"
+            className="w-full h-full object-cover blur-md scale-110"
+            alt="Students"
+          />
+        </motion.div>
+
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to from-[#0B0F19]/80 via-[#0B0F19]/70 to-[#0B0F19]" />
+
+        {/* Floating Gold Light */}
+        <motion.div
+          style={{ y: textY }}
+          className="absolute w-600 h-[600px] bg-[#C6A75E]/10 rounded-full blur-[150px]"
+        />
+
+        {/* Content */}
+        <motion.div
+          style={{ y: textY }}
+          className="relative z-10 max-w-4xl px-6"
+        >
+
+          <h1 className="text-gray-950 mt-30 text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-serif font-semibold leading-tight mb-8">
+            Welcome to BTVTED Course
+          </h1>
+
+          <h2 className="text-white font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-12">
+            Interactive Learning
+            <br />
+            <span className="text-white">Engaging Students</span>
+            <br />
+            In The Digital Age
+          </h2>
+
+          <button className="px-12 py-4 rounded-full bg-black text-white font-semibold text-lg shadow-xl hover:scale-105 transition duration-300">
+            Explore Majors
+          </button>
+        </motion.div>
+      </section>
+
+
+      {/* TESTIMONIAL SECTION */}
+      <section className="relative py-32 px-6 bg-gradient-to from-[#0B0F19] via-[#111827] to-[#0B0F19]">
+
+        {/* Decorative Glows */}
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#C6A75E]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C6A75E]/10 rounded-full blur-3xl" />
+
+        <motion.h2
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-serif font-bold text-center text-[#E5D3A1] mb-20 tracking-wide"
+        >
+          Student Testimonials
+        </motion.h2>
+
+        <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+
+          {allRatings.map((rating, index) => (
+            <motion.div
+              key={rating.id}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="relative backdrop-blur-xl bg-white/5 border border-[#C6A75E]/20 rounded-3xl p-10 text-center shadow-2xl hover:scale-105 transition duration-500"
+            >
+              <img
+                src={rating.image}
+                alt={rating.name}
+                className="w-24 h-24 rounded-full mx-auto mb-6 object-cover border-2 border-[#C6A75E]/40"
+              />
+
+              <h3 className="text-xl font-semibold text-[#E5D3A1] mb-3">
+                {rating.name}
+              </h3>
+
+              <div className="flex justify-center mb-4 text-[#C6A75E] text-lg">
+                ★★★★★
+              </div>
+
+              <p className="text-gray-300 text-sm leading-relaxed">
+                "{rating.testimonial}"
+              </p>
+
+              {/* Hover Glow */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to from-[#C6A75E]/0 via-[#C6A75E]/10 to-[#C6A75E]/0 opacity-0 hover:opacity-100 transition duration-500"></div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+    </div>
   );
 }
