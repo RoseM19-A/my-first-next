@@ -97,7 +97,7 @@ export default function App() {
         {/* Floating Gold Light */}
         <motion.div
           style={{ y: textY }}
-          className="absolute w-600 h-[600px] bg-[#C6A75E]/10 rounded-full blur-[150px]"
+          className="absolute w-[600 h-600px] bg-[#C6A75E]/10 rounded-full blur-[150px]"
         />
 
         {/* Content */}
