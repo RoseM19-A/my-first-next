@@ -130,7 +130,7 @@ export default function App() {
         {/* Parallax Background Glow */}
         <motion.div
           style={{ y: bgY }}
-          className="absolute top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-zinc-200 rounded-full blur-[140px] opacity-40"
+          className="absolute top-32 left-1/2 -translate-x-1/2 w-[700px h-700px] bg-zinc-200 rounded-full blur-[140px] opacity-40"
         />
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
