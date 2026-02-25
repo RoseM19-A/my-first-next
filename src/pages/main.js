@@ -34,17 +34,17 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function App() {
 
-  const containerRef = useRef(null);
+  const heroRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
+    target: heroRef,
+    offset: ["start start", "end start"] // important fix
   });
 
-  // Parallax Effects
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
-  const zoom = useTransform(scrollYProgress, [0, 0.4], [1, 1.15]);
+  // Parallax only inside hero
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
+  const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   const [allRatings] = useState([
     {
@@ -71,10 +71,13 @@ export default function App() {
   ]);
 
   return (
-    <div ref={containerRef} className="bg-[#0B0F19] text-white overflow-hidden">
+    <div className="bg-[#0B0F19] text-white">
 
       {/* HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center text-center">
+      <section
+        ref={heroRef}
+        className="relative h-screen flex items-center justify-center text-center overflow-hidden"
+      >
 
         {/* Parallax Background */}
         <motion.div
